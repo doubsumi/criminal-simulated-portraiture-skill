@@ -1,0 +1,15 @@
+schema_version: "0.1"
+status: project_observation_protocol
+purpose: "Record whole-face configuration before local feature detail."
+when_to_load: "For image-to-description and prompt preparation when the source image shows enough of the frontal or oblique face."
+source_refs: [S01, S02, CN03]
+rules:
+  - id: layout.face_outline
+    record: "Overall contour, width distribution, cheek and jaw transition, and chin shape as separate visible observations."
+    limitation: "Do not infer hidden three-dimensional structure or calibrated measurements from an ordinary photograph."
+  - id: layout.feature_spacing
+    record: "Record eye spacing, eye-line height, nose-to-mouth interval, mouth-to-chin interval, and mouth/nose width using qualitative within-image comparisons."
+    limitation: "Use a named visible reference; do not replace a relation with an unreferenced word such as relatively."
+  - id: layout.review
+    record: "After local observations, review the complete face for consistency between outline, proportions, and feature placement."
+    limitation: "A local feature observation cannot by itself make a likeness prompt ready."

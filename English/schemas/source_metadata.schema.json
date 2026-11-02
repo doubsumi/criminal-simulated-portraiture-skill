@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/source_metadata.schema.json",
+  "title": "SourceMetadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_id", "title", "organization", "version", "status", "official_url", "retrieved_at", "access", "license"],
+  "properties": {
+    "source_id": {"type": "string", "pattern": "^S[0-9]{2,}$"},
+    "title": {"type": "string", "minLength": 1},
+    "organization": {"type": "string", "minLength": 1},
+    "version": {},
+    "status": {"enum": ["verified", "partially_verified", "unavailable", "access_restricted", "superseded", "draft", "license_unclear"]},
+    "official_url": {"type": ["string", "null"], "format": "uri"},
+    "retrieved_at": {"type": "string", "format": "date"},
+    "access": {"type": "string"},
+    "license": {},
+    "local_path": {"type": ["string", "null"]},
+    "sha256": {"type": ["string", "null"], "pattern": "^[A-Fa-f0-9]{64}$"}
+  }
+}

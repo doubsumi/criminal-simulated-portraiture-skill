@@ -1,0 +1,851 @@
+{
+  "schema_version": "1.1.0",
+  "profile_id": "FP-SYN-CN-001",
+  "created_at": "2026-11-01T13:00:00Z",
+  "updated_at": "2026-11-01T13:40:00Z",
+  "task_mode": "image_to_description",
+  "language": "zh-CN",
+  "metadata": {
+    "skill_id": "forensic-facial-composite",
+    "profile_status": "review",
+    "subject_reference": null,
+    "user_confirmed": false
+  },
+  "task_context": {
+    "purpose": "facial_appearance_description",
+    "intended_output": [
+      "structured_profile",
+      "prompt_output"
+    ],
+    "forensic_case_context": false
+  },
+  "image_context": {
+    "asset_ids": [
+      "IMG-SYN-001"
+    ],
+    "viewpoints": [
+      "frontal"
+    ],
+    "viewpoint_description_en": "Frontal passport-style photograph, neutral expression.",
+    "mirror_status": "original"
+  },
+  "image_quality_report": {
+    "schema_version": "1.0.0",
+    "report_id": "IQR-SYN-0001",
+    "asset_id": "IMG-SYN-001",
+    "overall_status": "suitable_with_limitations",
+    "factors": {
+      "resolution_detail": {
+        "status": "clear",
+        "notes": ""
+      },
+      "sharpness": {
+        "status": "clear",
+        "notes": ""
+      },
+      "illumination": {
+        "status": "minor_issue",
+        "notes": "flat frontal lighting"
+      },
+      "noise": {
+        "status": "clear",
+        "notes": ""
+      },
+      "artifacts": {
+        "status": "unknown",
+        "notes": ""
+      },
+      "occlusion": {
+        "status": "minor_issue",
+        "notes": "ears partly covered by hair"
+      },
+      "pose": {
+        "status": "clear",
+        "notes": ""
+      },
+      "distortion": {
+        "status": "unknown",
+        "notes": ""
+      },
+      "crop": {
+        "status": "clear",
+        "notes": ""
+      }
+    },
+    "limitations": [
+      "ear detail not observable",
+      "skin texture partly smoothed by lighting"
+    ],
+    "reviewer": null,
+    "created_at": "2026-11-01T13:00:00Z"
+  },
+  "interview_context": null,
+  "features": [
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-01",
+      "component_id": "F02",
+      "feature_id": "F02.C02",
+      "feature_name_en": "Overall shape of face",
+      "feature_name_zh": "整体脸形",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "bilateral",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "oval_broad_midface",
+        "display_zh": "整体呈椭圆脸，中面部较宽，下颌略收",
+        "display_en": "oval face with a broad midface and a gently tapering lower face",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "single frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01",
+        "S02"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-02",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D01"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-02",
+      "component_id": "F03",
+      "feature_id": "F03.C01",
+      "feature_name_en": "Proportions/position of features on face",
+      "feature_name_zh": "五官配置比例",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "bilateral",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "high_eye_line_short_lower_third",
+        "display_zh": "眼睛位置略高，下庭相对较短",
+        "display_en": "eye line sits slightly high and the lower third of the face is relatively short",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph, non-standard camera"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01",
+        "CN03"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-03",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [
+        "lens distortion unknown"
+      ],
+      "dimension_id": "D10"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-03",
+      "component_id": "F05",
+      "feature_id": "F05.C01",
+      "feature_name_en": "Forehead shape",
+      "feature_name_zh": "额部形态",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "midline",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "broad_rounded_high_hairline",
+        "display_zh": "额头较宽，轮廓圆润，发际线偏高",
+        "display_en": "broad, gently rounded forehead with a relatively high hairline",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-05",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D04"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-04",
+      "component_id": "F06",
+      "feature_id": "F06.C01",
+      "feature_name_en": "Right eyebrow",
+      "feature_name_zh": "右眉",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "right",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "thick_straight_level_tail",
+        "display_zh": "右眉较粗、平直，眉尾水平",
+        "display_en": "thick, straight right eyebrow with a level tail",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-06R",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D01"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-05",
+      "component_id": "F06",
+      "feature_id": "F06.C02",
+      "feature_name_en": "Left eyebrow",
+      "feature_name_zh": "左眉",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "left",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "thinner_soft_arch",
+        "display_zh": "左眉略细，眉峰柔和",
+        "display_en": "slightly thinner left eyebrow with a soft arch",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-06L",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D01"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-06",
+      "component_id": "F07",
+      "feature_id": "F07.C03",
+      "feature_name_en": "Right/left eye fissure opening",
+      "feature_name_zh": "眼裂形态",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "bilateral",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "narrow_slight_upward_tilt",
+        "display_zh": "眼裂较窄，外眼角略上扬",
+        "display_en": "narrow palpebral fissures with a slight upward lateral tilt",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01",
+        "CN03"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-07",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D01"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-07",
+      "component_id": "F07",
+      "feature_id": "F07.C04",
+      "feature_name_en": "Right/left upper eyelid",
+      "feature_name_zh": "上眼睑",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "bilateral",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "visible_crease_mild_hooding",
+        "display_zh": "可见双眼皮褶皱，上睑轻度遮盖",
+        "display_en": "visible double-eyelid crease with mild upper-lid hooding",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-07B",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D07"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-08",
+      "component_id": "F07",
+      "feature_id": "F07.C09",
+      "feature_name_en": "Right/left medial canthus",
+      "feature_name_zh": "内眼角",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "bilateral",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "prominent_epicanthic_fold",
+        "display_zh": "内眼角可见明显内眦赘皮",
+        "display_en": "prominent epicanthic fold at the medial canthus",
+        "free_text": ""
+      },
+      "visibility": "partial",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph, mild shadow"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-07C",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [
+        "shadow at inner canthus"
+      ],
+      "dimension_id": "D01"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-09",
+      "component_id": "F09",
+      "feature_id": "F09.C02",
+      "feature_name_en": "Nasal root/bridge",
+      "feature_name_zh": "鼻根/鼻梁",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "midline",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "low_root_straight_wide_bridge",
+        "display_zh": "鼻根偏低，鼻梁平直、中等偏宽",
+        "display_en": "low nasal root with a straight, moderately wide bridge",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01",
+        "CN03"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-09",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D01"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-10",
+      "component_id": "F09",
+      "feature_id": "F09.C04",
+      "feature_name_en": "Nasal tip",
+      "feature_name_zh": "鼻尖",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "midline",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "rounded_slightly_bulbous",
+        "display_zh": "鼻尖圆润，略呈球状",
+        "display_en": "rounded nasal tip with a slightly bulbous appearance",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-09T",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D01"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-11",
+      "component_id": "F11",
+      "feature_id": "F11.C03",
+      "feature_name_en": "Upper lip",
+      "feature_name_zh": "上唇",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "midline",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "thin_soft_cupids_bow",
+        "display_zh": "上唇较薄，唇峰柔和",
+        "display_en": "thin upper lip with a soft cupid's bow",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01",
+        "CN03"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-11U",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D06"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-12",
+      "component_id": "F11",
+      "feature_id": "F11.C04",
+      "feature_name_en": "Lower lip",
+      "feature_name_zh": "下唇",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "midline",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "fuller_slightly_everted",
+        "display_zh": "下唇较厚，略外翻",
+        "display_en": "fuller lower lip, slightly everted",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-11L",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D06"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-13",
+      "component_id": "F12",
+      "feature_id": "F12.C01",
+      "feature_name_en": "Chin, frontal/profile",
+      "feature_name_zh": "下巴",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "midline",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "rounded_soft_jawline",
+        "display_zh": "下巴圆钝，下颌线柔和",
+        "display_en": "rounded chin with a soft jawline",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-12",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D01"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-14",
+      "component_id": "F04",
+      "feature_id": "F04.C01",
+      "feature_name_en": "Hair shape/spatial distribution",
+      "feature_name_zh": "发型与分布",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "bilateral",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "straight_short_left_part",
+        "display_zh": "黑色直发，短发，左侧分",
+        "display_en": "straight black hair, short, parted on the left",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-04",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D01"
+    },
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-SYN-15",
+      "component_id": "F09",
+      "feature_id": "F09.C06",
+      "feature_name_en": "Nasal alae",
+      "feature_name_zh": "鼻翼",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "bilateral",
+        "reference_frame": "anatomical",
+        "mirror_status": "original"
+      },
+      "observation": {
+        "value": "moderately_flared",
+        "display_zh": "鼻翼中等外张",
+        "display_en": "moderately flared nasal alae",
+        "free_text": ""
+      },
+      "visibility": "clear",
+      "confidence": {
+        "level": "medium",
+        "value": null,
+        "calibrated": false,
+        "basis": "frontal photograph"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-SYN-001-REGION-09A",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-SYN-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [],
+      "dimension_id": "D03"
+    }
+  ],
+  "spatial_relations": [
+    {
+      "relation_id": "REL-SYN-01",
+      "relation_type": "above_below",
+      "subject_feature_id": "F07.C03",
+      "reference_feature_id": "F09.C02",
+      "value": {
+        "display_en": "the eye line sits at roughly the midpoint between hairline and nasal root",
+        "display_zh": "眼线大致位于发际线与鼻根之间的一半"
+      },
+      "viewpoint": "frontal",
+      "evidence_refs": [
+        "IMG-SYN-001-REGION-03"
+      ],
+      "limitations": []
+    }
+  ],
+  "asymmetries": [],
+  "distinctive_marks": [],
+  "unknowns": [
+    "ear detail",
+    "skin texture"
+  ],
+  "conflicts": [],
+  "summary": {},
+  "artist_brief": null,
+  "prompt_output": null,
+  "audit_log": [
+    {
+      "event_id": "EVT-SYN-01",
+      "event_type": "created",
+      "timestamp": "2026-11-01T13:00:00Z",
+      "actor_type": "system",
+      "description": "synthetic Chinese-face fixture for prompt diagnostics",
+      "target_observation_id": null
+    }
+  ]
+}

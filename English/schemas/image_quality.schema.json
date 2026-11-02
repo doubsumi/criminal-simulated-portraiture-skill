@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/image_quality.schema.json",
+  "title": "ImageQualityReport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "report_id", "asset_id", "overall_status", "factors", "limitations"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "report_id": {"type": "string", "minLength": 1},
+    "asset_id": {"type": "string", "minLength": 1},
+    "overall_status": {"enum": ["suitable_for_limited_observation", "suitable_with_limitations", "not_suitable", "unknown"]},
+    "factors": {"type": "object", "additionalProperties": false, "required": ["resolution_detail", "sharpness", "illumination", "noise", "artifacts", "occlusion", "pose", "distortion", "crop"], "properties": {"resolution_detail": {"$ref": "#/$defs/factor"}, "sharpness": {"$ref": "#/$defs/factor"}, "illumination": {"$ref": "#/$defs/factor"}, "noise": {"$ref": "#/$defs/factor"}, "artifacts": {"$ref": "#/$defs/factor"}, "occlusion": {"$ref": "#/$defs/factor"}, "pose": {"$ref": "#/$defs/factor"}, "distortion": {"$ref": "#/$defs/factor"}, "crop": {"$ref": "#/$defs/factor"}}},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "reviewer": {"type": ["string", "null"]},
+    "created_at": {"type": ["string", "null"], "format": "date-time"}
+  },
+  "$defs": {"factor": {"type": "object", "additionalProperties": false, "required": ["status", "notes"], "properties": {"status": {"enum": ["clear", "minor_issue", "major_issue", "unknown"]}, "notes": {"type": "string"}}}}
+}

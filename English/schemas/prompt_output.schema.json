@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/prompt_output.schema.json",
+  "title": "PromptOutput",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "prompt_id", "profile_id", "profile_revision", "compiler_version", "positive_prompt", "negative_prompt", "included_observations", "included_relations", "included_asymmetries", "excluded_observations", "limitations"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "prompt_id": {"type": "string", "minLength": 1},
+    "profile_id": {"type": "string", "minLength": 1},
+    "profile_revision": {"type": "string", "minLength": 1},
+    "compiler_version": {"type": "string", "minLength": 1},
+    "positive_prompt": {"type": "string"},
+    "negative_prompt": {"type": "string"},
+    "included_observations": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "included_relations": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "included_asymmetries": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "excluded_observations": {"type": "array", "items": {"type": "string"}},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "created_at": {"type": ["string", "null"], "format": "date-time"}
+  }
+}

@@ -1,0 +1,27 @@
+schema_version: "0.1"
+status: project_observation_protocol
+purpose: "Separate visible upper and lower lip dimensions so a thick upper lip is not reduced to a generic beauty cue."
+when_to_load: "When the mouth region is clear enough to distinguish vermilion, lip fissure, corners, philtrum, or protrusion."
+source_refs: [S01, CN03]
+dimensions:
+  - id: upper_vermilion_height
+    zh: 上唇唇红可见高度
+    observe: "Visible height of the upper vermilion, including central and lateral contour when visible."
+  - id: lower_vermilion_height
+    zh: 下唇唇红可见高度
+    observe: "Visible height of the lower vermilion, including central fullness when visible."
+  - id: vermilion_contour
+    zh: 唇红缘轮廓
+    observe: "Cupid's bow, central peaks, border definition, and continuity."
+  - id: lip_fissure
+    zh: 唇裂隙
+    observe: "Opening, contact, length, curvature, and symmetry."
+  - id: mouth_corners
+    zh: 口角
+    observe: "Corner shape and angle, separately from overall mouth width."
+  - id: protrusion
+    zh: 唇部外突
+    observe: "Only when supported by a suitable view; do not infer it from frontal apparent thickness."
+rules:
+  - "Never use a population ideal or aesthetic preference to fill an individual observation."
+  - "A statement such as thick upper lip must identify whether it refers to vermilion height, soft-tissue fullness, protrusion, or an unresolved combination."

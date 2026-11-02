@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/asymmetry.schema.json",
+  "title": "AsymmetryObservation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["asymmetry_id", "left_feature_id", "right_feature_id", "difference", "viewpoint", "visibility", "confidence", "evidence_refs", "limitations"],
+  "properties": {
+    "asymmetry_id": {"type": "string", "minLength": 1},
+    "left_feature_id": {"type": "string", "minLength": 1},
+    "right_feature_id": {"type": "string", "minLength": 1},
+    "difference": {"type": "object", "additionalProperties": false, "required": ["value", "display_zh", "display_en"], "properties": {"value": {}, "display_zh": {"type": "string"}, "display_en": {"type": "string"}}},
+    "viewpoint": {"enum": ["frontal", "left_oblique", "right_oblique", "left_profile", "right_profile", "unknown", "other"]},
+    "visibility": {"enum": ["clear", "partial", "obscured", "not_visible", "uncertain"]},
+    "confidence": {"enum": ["high", "medium", "low", "unknown"]},
+    "evidence_refs": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

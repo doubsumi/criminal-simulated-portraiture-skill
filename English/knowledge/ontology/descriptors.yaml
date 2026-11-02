@@ -1,0 +1,101 @@
+schema_version: "0.1"
+source_ids: [S01, S02, S03, S05, S09, S11]
+status: project_controlled_vocabulary
+note: "Values below are normalized engineering labels. They are not asserted as official FISWG enumerations unless the source component explicitly lists the term."
+dimensions:
+  - id: D01
+    en: shape
+    zh: 形状
+  - id: D02
+    en: size
+    zh: 大小
+  - id: D03
+    en: width
+    zh: 宽度
+  - id: D04
+    en: height
+    zh: 高度
+  - id: D05
+    en: length
+    zh: 长度
+  - id: D06
+    en: thickness
+    zh: 厚度
+  - id: D07
+    en: prominence
+    zh: 突出度
+  - id: D08
+    en: protrusion
+    zh: 前突/外突
+  - id: D09
+    en: position
+    zh: 位置
+  - id: D10
+    en: relative_position
+    zh: 相对位置
+  - id: D11
+    en: angle
+    zh: 角度
+  - id: D12
+    en: orientation
+    zh: 走向
+  - id: D13
+    en: contour
+    zh: 轮廓
+  - id: D14
+    en: texture
+    zh: 纹理
+  - id: D15
+    en: density
+    zh: 密度
+  - id: D16
+    en: color
+    zh: 颜色
+  - id: D17
+    en: tonality
+    zh: 色调
+  - id: D18
+    en: symmetry
+    zh: 对称性
+  - id: D19
+    en: visibility
+    zh: 可见性
+  - id: D20
+    en: distribution
+    zh: 分布
+  - id: D21
+    en: quantity
+    zh: 数量
+  - id: D22
+    en: pattern
+    zh: 模式
+  - id: D23
+    en: depth
+    zh: 深度
+  - id: D24
+    en: continuity
+    zh: 连续性
+  - id: D25
+    en: detail
+    zh: 细节
+states:
+  - id: S_UNKNOWN
+    en: unknown
+    zh: 未知
+    meaning: No reliable observation or memory statement is available.
+  - id: S_NOT_OBSERVABLE
+    en: not_observable
+    zh: 不可观察
+    meaning: The feature may exist but image/pose/occlusion/quality prevents observation.
+  - id: S_NOT_APPLICABLE
+    en: not_applicable
+    zh: 不适用
+    meaning: The field does not apply to the case or component.
+  - id: S_PRESENT
+    en: present
+    zh: 存在
+    meaning: The feature is explicitly observed or reported, with evidence status recorded separately.
+  - id: S_ABSENT
+    en: absent
+    zh: 未见
+    meaning: Absence is recorded only when the feature was observable and the observation supports it.

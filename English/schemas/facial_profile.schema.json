@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/facial_profile.schema.json",
+  "title": "FacialProfile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "profile_id", "created_at", "updated_at", "task_mode", "language", "metadata", "task_context", "image_context", "image_quality_report", "interview_context", "features", "spatial_relations", "asymmetries", "distinctive_marks", "unknowns", "conflicts", "summary", "artist_brief", "prompt_output", "audit_log"],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "profile_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "task_mode": {"enum": ["image_to_description", "memory_to_composite"]},
+    "language": {"type": "string", "minLength": 2},
+    "metadata": {"type": "object", "additionalProperties": false, "required": ["skill_id", "profile_status", "subject_reference", "user_confirmed"], "properties": {"skill_id": {"type": "string"}, "profile_status": {"enum": ["draft", "review", "confirmed", "archived"]}, "subject_reference": {"type": ["string", "null"]}, "user_confirmed": {"type": "boolean"}}},
+    "task_context": {"type": "object", "additionalProperties": false, "required": ["purpose", "intended_output", "forensic_case_context"], "properties": {"purpose": {"type": "string"}, "intended_output": {"type": "array", "items": {"type": "string"}}, "forensic_case_context": {"type": "boolean"}}},
+    "appearance_context": {"type": "array", "items": {"$ref": "#/$defs/appearance_cue"}},
+    "prompt_focus": {"type": "array", "items": {"$ref": "#/$defs/prompt_focus"}},
+    "image_context": {"anyOf": [{"$ref": "#/$defs/image_context"}, {"type": "null"}]},
+    "image_quality_report": {"anyOf": [{"$ref": "image_quality.schema.json"}, {"type": "null"}]},
+    "interview_context": {"anyOf": [{"$ref": "#/$defs/interview_context"}, {"type": "null"}]},
+    "features": {"type": "array", "items": {"$ref": "feature_observation.schema.json"}},
+    "spatial_relations": {"type": "array", "items": {"$ref": "spatial_relation.schema.json"}},
+    "asymmetries": {"type": "array", "items": {"$ref": "asymmetry.schema.json"}},
+    "distinctive_marks": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "conflicts": {"type": "array", "items": {"$ref": "#/$defs/conflict"}},
+    "summary": {"type": "object"},
+    "artist_brief": {"type": ["string", "null"]},
+    "prompt_output": {"anyOf": [{"$ref": "prompt_output.schema.json"}, {"type": "null"}]},
+    "audit_log": {"type": "array", "items": {"$ref": "#/$defs/audit_event"}}
+  },
+  "$defs": {
+    "prompt_focus": {"type": "object", "additionalProperties": false, "required": ["focus_id", "observation_ids", "relation_ids", "avoid_en", "source", "note"], "properties": {"focus_id": {"type": "string", "minLength": 1}, "observation_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "relation_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "avoid_en": {"type": "array", "items": {"type": "string", "minLength": 1}}, "source": {"enum": ["user_visual_feedback", "image_review"]}, "note": {"type": "string"}}},
+    "appearance_cue": {"type": "object", "additionalProperties": false, "required": ["category", "display_en", "source_type", "confirmation_status", "evidence_refs", "limitations"], "properties": {"category": {"enum": ["age_appearance", "gender_presentation", "expression"]}, "display_en": {"type": "string", "minLength": 1}, "source_type": {"enum": ["direct_visual_observation", "user_free_recall", "user_cued_recall", "user_response_to_neutral_clarification", "agent_suggestion", "unknown"]}, "confirmation_status": {"enum": ["unconfirmed", "confirmed_by_user", "rejected_by_user"]}, "evidence_refs": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1}, "limitations": {"type": "array", "items": {"type": "string"}}}},
+    "image_context": {"type": "object", "additionalProperties": false, "required": ["asset_ids", "viewpoints", "mirror_status"], "properties": {"asset_ids": {"type": "array", "items": {"type": "string"}}, "viewpoints": {"type": "array", "items": {"type": "string"}}, "viewpoint_description_en": {"type": "string", "minLength": 1}, "mirror_status": {"enum": ["original", "mirrored", "mixed", "unknown"]}}},
+    "interview_context": {"type": "object", "additionalProperties": false, "required": ["interview_ids", "prior_exposure_recorded"], "properties": {"interview_ids": {"type": "array", "items": {"type": "string"}}, "prior_exposure_recorded": {"type": "boolean"}}},
+    "conflict": {"type": "object", "additionalProperties": false, "required": ["conflict_id", "observation_ids", "description", "status"], "properties": {"conflict_id": {"type": "string"}, "observation_ids": {"type": "array", "items": {"type": "string"}}, "description": {"type": "string"}, "status": {"enum": ["open", "resolved", "deferred"]}}},
+    "audit_event": {"type": "object", "additionalProperties": false, "required": ["event_id", "event_type", "timestamp", "actor_type", "description"], "properties": {"event_id": {"type": "string"}, "event_type": {"enum": ["created", "agent_suggested", "user_confirmed", "user_rejected", "user_revised", "expert_reviewed", "prompt_compiled", "prompt_revised", "interview_reverted"]}, "timestamp": {"type": "string", "format": "date-time"}, "actor_type": {"enum": ["system", "agent", "user", "expert"]}, "description": {"type": "string"}, "target_observation_id": {"type": ["string", "null"]}}}
+  }
+}

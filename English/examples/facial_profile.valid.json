@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.1.0",
+  "profile_id": "FP-000001",
+  "created_at": "2026-11-01T12:00:00Z",
+  "updated_at": "2026-11-01T12:00:00Z",
+  "task_mode": "image_to_description",
+  "language": "zh-CN",
+  "metadata": {
+    "skill_id": "forensic-facial-composite",
+    "profile_status": "draft",
+    "subject_reference": "subject-1",
+    "user_confirmed": false
+  },
+  "task_context": {
+    "purpose": "facial_appearance_description",
+    "intended_output": [
+      "structured_profile",
+      "artist_brief"
+    ],
+    "forensic_case_context": false
+  },
+  "image_context": {
+    "asset_ids": [
+      "IMG-001"
+    ],
+    "viewpoints": [
+      "frontal"
+    ],
+    "mirror_status": "unknown"
+  },
+  "image_quality_report": {
+    "schema_version": "1.0.0",
+    "report_id": "IQR-0001",
+    "asset_id": "IMG-001",
+    "overall_status": "suitable_with_limitations",
+    "factors": {
+      "resolution_detail": {
+        "status": "clear",
+        "notes": ""
+      },
+      "sharpness": {
+        "status": "clear",
+        "notes": ""
+      },
+      "illumination": {
+        "status": "minor_issue",
+        "notes": ""
+      },
+      "noise": {
+        "status": "clear",
+        "notes": ""
+      },
+      "artifacts": {
+        "status": "unknown",
+        "notes": ""
+      },
+      "occlusion": {
+        "status": "minor_issue",
+        "notes": "头发遮挡部分耳部"
+      },
+      "pose": {
+        "status": "minor_issue",
+        "notes": "轻微偏转"
+      },
+      "distortion": {
+        "status": "unknown",
+        "notes": ""
+      },
+      "crop": {
+        "status": "clear",
+        "notes": ""
+      }
+    },
+    "limitations": [
+      "耳部细节不可观察"
+    ],
+    "reviewer": null,
+    "created_at": "2026-11-01T12:00:00Z"
+  },
+  "interview_context": null,
+  "features": [
+    {
+      "schema_version": "1.1.0",
+      "observation_id": "OBS-0001",
+      "component_id": "F07",
+      "feature_id": "F07.C03",
+      "feature_name_en": "Right eye fissure opening",
+      "feature_name_zh": "右眼裂",
+      "viewpoint": "frontal",
+      "laterality": {
+        "side": "right",
+        "reference_frame": "image",
+        "mirror_status": "unknown"
+      },
+      "observation": {
+        "value": "unknown",
+        "display_zh": "未知",
+        "display_en": "unknown",
+        "free_text": "暂不作形态判断"
+      },
+      "visibility": "partial",
+      "confidence": {
+        "level": "low",
+        "value": null,
+        "calibrated": false,
+        "basis": "轻微偏转"
+      },
+      "source_type": "direct_visual_observation",
+      "confirmation_status": "unconfirmed",
+      "knowledge_refs": [
+        "S01",
+        "S02"
+      ],
+      "evidence_refs": [
+        {
+          "evidence_id": "IMG-001-REGION-07",
+          "evidence_type": "image_region",
+          "asset_id": "IMG-001",
+          "region": {
+            "x": null,
+            "y": null,
+            "width": null,
+            "height": null
+          },
+          "timecode": null
+        }
+      ],
+      "limitations": [
+        "镜像状态未知"
+      ],
+      "dimension_id": "D01"
+    }
+  ],
+  "spatial_relations": [],
+  "asymmetries": [],
+  "distinctive_marks": [],
+  "unknowns": [
+    "耳部细节"
+  ],
+  "conflicts": [],
+  "summary": {},
+  "artist_brief": null,
+  "prompt_output": null,
+  "audit_log": [
+    {
+      "event_id": "EVT-0001",
+      "event_type": "created",
+      "timestamp": "2026-11-01T12:00:00Z",
+      "actor_type": "system",
+      "description": "初始草稿",
+      "target_observation_id": null
+    }
+  ]
+}

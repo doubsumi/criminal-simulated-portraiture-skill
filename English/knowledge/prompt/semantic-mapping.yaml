@@ -1,0 +1,23 @@
+schema_version: "0.1"
+status: project_controlled_vocabulary
+purpose: "Map reviewed observation dimensions to generation wording without collapsing distinct anatomical meanings."
+when_to_load: "During prompt compilation after observations have passed evidence and visibility checks."
+source_refs: [S01, CN03]
+mapping:
+  upper_vermilion_height:
+    preferred_en: "upper vermilion height"
+    avoid: ["full lips", "plump lips"]
+    note: "Those alternatives may introduce a beauty or protrusion interpretation."
+  protrusion:
+    preferred_en: "upper lip projection"
+    avoid: ["thick upper lip"]
+    note: "Projection and frontal vermilion height are different dimensions."
+  brow_ridge_appearance:
+    preferred_en: "visible brow-ridge prominence"
+    avoid: ["thick eyebrows", "heavy brows"]
+  eyebrow_hair:
+    preferred_en: "eyebrow hair shape, density, and direction"
+    avoid: ["strong brow bone"]
+  feature_layout:
+    preferred_en: "recorded relative placement of the eyes, nose, mouth, and chin"
+    avoid: ["balanced proportions", "ideal facial proportions"]

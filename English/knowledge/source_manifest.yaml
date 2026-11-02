@@ -1,0 +1,498 @@
+schema_version: "1.0"
+project: forensic-facial-composite
+retrieved_at: "2026-11-01"
+license_policy: "Project license undecided; third-party rights remain with publishers."
+sources:
+  - id: CN03
+    title: "人像鉴定技术规范"
+    organization: 中华人民共和国司法部
+    type: judicial_administration_industry_standard
+    version: "SF/T 0125—2021"
+    date: "2021-11-17"
+    status: verified
+    official_url: "https://www.ssfjd.com/Files/Info_Att/2021/2021_12_11/17_57_34_9036/SFT01252021.pdf"
+    local_path: null
+    sha256: 0CFB485C2F51B6AD2E8301AF7EDE42D329B96175D0E6D2EB1EB6E26D3526FCBA
+    access: downloaded
+    license: "Publicly downloadable original; redistribution permission not independently established."
+    use: "Chinese vocabulary for facial components, spatial relationships, and visible accessories; not an image-generation effectiveness source"
+  - id: S01
+    title: "Facial Image Comparison Feature List for Morphological Analysis"
+    organization: FISWG
+    type: official_guideline
+    version: "2.0"
+    date: "2018-09-11"
+    status: verified
+    official_url: "https://fiswg.org/FISWG_Morph_Analysis_Feature_List_v2.0_20180911.pdf"
+    directory_url: "https://www.fiswg.org/documents/"
+    local_path: null
+    sha256: C58609096F2E7373B4FC3785A10CC8C713ED9EA24FD2465FD0F554BA4B56A135
+    access: downloaded
+    license: "Copyright/redistribution terms not independently cleared; cite and retain original notices."
+    use: "19-component morphology taxonomy and feature vocabulary"
+  - id: S02
+    title: "Image Factors To Consider In Facial Image Comparison"
+    organization: FISWG
+    type: official_guideline
+    version: "1.0"
+    date: "2021-05-28"
+    status: verified
+    official_url: "https://fiswg.org/fiswg_image_factors_to_consider_in_facial_img_comparison_v1.0_2021.05.28.pdf"
+    directory_url: "https://www.fiswg.org/documents/"
+    local_path: null
+    sha256: B81E9B0925CB6D06B8170F92F2C205789F2C7A98F1A2B2E7A363CC563322D1A1
+    access: downloaded
+    license: "Copyright/redistribution terms not independently cleared."
+    use: "Image quality and observability gates"
+  - id: S03
+    title: "Physical Stability Of Facial Features Of Adults"
+    organization: FISWG
+    type: official_guideline
+    version: "2.0"
+    date: "2021-05-28"
+    status: verified
+    official_url: "https://fiswg.org/fiswg_physical_stability_of_facial_features_of_adults_v2.0_2021.05.28.pdf"
+    directory_url: "https://www.fiswg.org/documents/"
+    local_path: null
+    sha256: 00E46797C8A709FE46B7E6766AB9A1134B92CDF42E27560857857187A903D7D7
+    access: downloaded
+    license: "Copyright/redistribution terms not independently cleared."
+    use: "Temporal stability and change factors"
+  - id: S04
+    title: "Facial Comparison Overview and Methodology Guidelines"
+    organization: FISWG
+    type: official_guideline
+    version: "2.1"
+    date: "2026-02-26"
+    status: verified
+    official_url: "https://fiswg.org/fiswg_facial_comparison_overview_and_methodology_guidelines_V2.1_2026026.pdf"
+    directory_url: "https://www.fiswg.org/documents/"
+    local_path: null
+    sha256: C714880DEDE2B6B2798934EBE9CDA7F71FFD1C59D78B09C977DD8C069579148E
+    access: downloaded
+    license: "Copyright/redistribution terms not independently cleared."
+    use: "Methodology, documentation, review and uncertainty context"
+  - id: S05
+    title: "FISWG Glossary and Acronyms"
+    organization: FISWG
+    type: official_terminology
+    version: "4.0"
+    date: "2026-06-04"
+    status: verified
+    official_url: "https://fiswg.org/fiswg_glossary_acronym_v4.0_20260604.pdf"
+    directory_url: "https://www.fiswg.org/documents/"
+    local_path: null
+    sha256: 2C8037B91DC9001B059231198F0035A55ACD92405D168061F6D395089F67A667
+    access: downloaded
+    license: "Copyright/redistribution terms not independently cleared."
+    use: "Terminology and acronym normalization"
+  - id: S06
+    title: "Practitioner Code of Ethics"
+    organization: FISWG
+    type: official_ethics
+    version: "3.0"
+    date: "2024-11-22"
+    status: verified
+    official_url: "https://fiswg.org/fiswg_code_of_ethics_v3_2024.11.22.pdf"
+    directory_url: "https://www.fiswg.org/documents/"
+    local_path: null
+    sha256: 8921C5FEF179C2E4EF22580D526B131C62446A7AFB8914FCE963081441592673
+    access: downloaded
+    license: "Copyright/redistribution terms not independently cleared."
+    use: "Objectivity, ethics, records and quality control"
+  - id: S07
+    title: "Standards and Guidelines for Forensic Art and Facial Identification"
+    organization: IAI
+    type: historical_professional_guideline
+    version: "First Edition"
+    date: unknown
+    status: partially_verified
+    official_url: "https://theiai.org/docs/ForensicArtGuidelinesSGFAFI1stEd.pdf"
+    directory_url: "https://theiai.org/"
+    local_path: null
+    sha256: null
+    access: official_historical_link_not_reconfirmed
+    license: unclear
+    use: "Historical forensic art and witness/artist practice context"
+  - id: S08
+    title: "Minimum Requirements Document: Facial Identification"
+    organization: IFSA
+    type: professional_minimum_requirements
+    version: "Version 1; September 2025 file path"
+    date: "2025-09"
+    status: verified
+    official_url: "https://www.ifsa-forensics.org/wp-content/uploads/2025/12/IFSA-MRD-Facial-Identification.pdf"
+    directory_url: "https://www.ifsa-forensics.org/minimum-requirements-documents/"
+    local_path: null
+    sha256: CF84815D2698CB296281F5EE41DA635952B15E2677E4EDF8F235B73F3FF44EC0
+    access: downloaded
+    license: "Publisher terms not independently cleared; use as reference, not redistribution grant."
+    use: "Adjacent facial identification quality and competence requirements"
+  - id: S09
+    title: "Anatomy, Head and Neck: Face"
+    organization: "NCBI Bookshelf / StatPearls"
+    type: anatomy_reference
+    version: current_web_chapter
+    date: unknown
+    status: verified
+    official_url: "https://www.ncbi.nlm.nih.gov/sites/books/NBK551530/"
+    directory_url: null
+    local_path: null
+    sha256: null
+    access: readable_web_source
+    license: "NCBI/StatPearls terms apply; no local copy made."
+    use: "Face, soft tissue, muscles, bones and regional anatomy"
+  - id: S10
+    title: "A Standardized Nomenclature for Craniofacial and Facial Anthropometry"
+    organization: FISWG
+    type: draft_reference
+    version: draft_for_comment
+    date: "2026-09-01"
+    status: draft
+    official_url: "https://www.fiswg.org/draft-documents/"
+    directory_url: "https://www.fiswg.org/draft-documents/"
+    local_path: null
+    sha256: null
+    access: metadata_only
+    license: unclear
+    use: "Draft terminology and landmark quality context only"
+  - id: S11
+    title: "A Preliminary Study of the Reliability of Anatomical Facial Landmarks Used in Facial Comparison"
+    organization: PubMed / Journal of Forensic Sciences
+    type: peer_reviewed_research
+    version: "2019"
+    date: "2019"
+    status: verified
+    official_url: "https://pubmed.ncbi.nlm.nih.gov/30107642/"
+    directory_url: "https://doi.org/10.1111/1556-4029.13873"
+    local_path: null
+    sha256: null
+    access: abstract_and_metadata
+    license: publisher_rights_apply
+    use: "Landmark reliability, observer variation, image quality and pose"
+  - id: S12
+    title: "Forensic Procedures for Facial-Composite Construction"
+    organization: "Journal of Forensic Practice / Fodarella et al."
+    type: peer_reviewed_research
+    version: "2015"
+    date: "2015"
+    status: verified
+    official_url: "https://doi.org/10.1108/JFP-10-2014-0033"
+    directory_url: null
+    local_path: null
+    sha256: null
+    access: publisher_metadata
+    license: publisher_rights_apply
+    use: "Interview and construction procedures"
+  - id: S13
+    title: "Constructing identifiable composite faces: The importance of cognitive alignment of interview and construction procedure"
+    organization: PubMed
+    type: peer_reviewed_research
+    version: "2019"
+    date: "2019"
+    status: verified
+    official_url: "https://pubmed.ncbi.nlm.nih.gov/31763863/"
+    directory_url: null
+    local_path: null
+    sha256: null
+    access: abstract_and_metadata
+    license: publisher_rights_apply
+    use: "Cognitive alignment between interview and construction"
+  - id: S14
+    title: "An Overview of the Latest Developments in Facial Imaging"
+    organization: PubMed Central
+    type: open_review
+    version: "2019"
+    date: "2019"
+    status: verified
+    official_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6427692/"
+    pdf_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6427692/pdf/tfsr-4-1519892.pdf"
+    directory_url: null
+    local_path: null
+    sha256: null
+    access: open_full_text_web
+    license: "PMC article license must be checked before redistribution."
+    use: "Facial imaging and composite system background"
+  - id: S15
+    title: "Configural and Featural Information in Facial-Composite Images"
+    organization: PubMed / Science & Justice
+    type: peer_reviewed_research
+    version: "2014"
+    date: "2014"
+    status: verified
+    official_url: "https://pubmed.ncbi.nlm.nih.gov/24796951/"
+    directory_url: "https://doi.org/10.1016/j.scijus.2013.11.001"
+    local_path: null
+    sha256: null
+    access: abstract_and_metadata
+    license: publisher_rights_apply
+    use: "Configural versus local facial information"
+  - id: S16
+    title: "The Value of Whole-Face Procedures for Recall-Based Facial-Composite Construction"
+    organization: Wiley / Applied Cognitive Psychology
+    type: peer_reviewed_research
+    version: "2025"
+    date: "2025"
+    status: verified
+    official_url: "https://doi.org/10.1002/acp.70015"
+    directory_url: null
+    local_path: null
+    sha256: null
+    access: publisher_metadata
+    license: publisher_rights_apply
+    use: "Whole-face recall and recognizability"
+  - id: S17
+    title: "Do cognitive abilities reduce eyewitness susceptibility to the misinformation effect? A systematic review"
+    organization: PubMed Central
+    type: open_systematic_review
+    version: "2024"
+    date: "2024"
+    status: verified
+    official_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11680610/"
+    directory_url: null
+    local_path: null
+    sha256: null
+    access: open_full_text_web
+    license: "PMC article license must be checked before redistribution."
+    use: "Eyewitness memory, misinformation and contamination risk"
+  - id: S18
+    title: "Forensic Facial Comparison: Current Status"
+    organization: MDPI Biology
+    type: open_review
+    version: "2021"
+    date: "2021"
+    status: verified
+    official_url: "https://www.mdpi.com/2079-7737/10/12/1269"
+    directory_url: null
+    local_path: null
+    sha256: null
+    access: open_full_text_web
+    license: "MDPI article license must be checked before reuse."
+    use: "Current status, reliability and limitations of facial comparison"
+  - id: S19
+    title: "NIST Facial & Iris Identification Subcommittee"
+    organization: NIST/OSAC
+    type: official_organization_page
+    version: current_page
+    date: unknown
+    status: verified
+    official_url: "https://www.nist.gov/adlp/spo/organization-scientific-area-committees-forensic-science/facial-iris-identification"
+    directory_url: null
+    local_path: null
+    sha256: null
+    access: readable_web_source
+    license: "NIST page terms apply."
+    use: "Standards ecosystem and status context"
+  - id: S20
+    title: "Standard Guide for Facial Image Comparison Documentation (OSAC 2022-S-0008)"
+    organization: NIST/OSAC
+    type: proposed_draft_standard
+    version: "2022-S-0008"
+    date: unknown
+    status: draft
+    official_url: "https://www.nist.gov/standard/906"
+    directory_url: null
+    local_path: null
+    sha256: null
+    access: status_page
+    license: "NIST/ASTM rights and status apply."
+    use: "Documentation transparency and uncertainty context; not claimed as final certification"
+  - id: S21
+    title: "NIST Face Recognition Technology Evaluation"
+    organization: NIST
+    type: official_evaluation_program
+    version: current_web_program
+    date: unknown
+    status: verified
+    official_url: "https://pages.nist.gov/frvt/html/frvt11.html"
+    directory_url: null
+    local_path: null
+    sha256: null
+    access: readable_web_source
+    license: "NIST page terms apply."
+    use: "Automated face recognition evaluation background only"
+  - id: S22
+    title: "Agent Skills Official Specification"
+    organization: Agent Skills
+    type: open_engineering_specification
+    version: current_web_spec
+    date: unknown
+    status: verified
+    official_url: "https://agentskills.io/specification"
+    directory_url: "https://github.com/agentskills/agentskills"
+    local_path: null
+    sha256: null
+    access: readable_web_source
+    license: "See upstream specification repository."
+    use: "SKILL.md format, references, progressive disclosure and validation"
+  - id: S23
+    title: "Visual Image Manipulation Detection in Facial Images"
+    organization: FISWG
+    type: official_guideline
+    version: "1.0"
+    date: "2024-11-22"
+    status: verified
+    official_url: "https://fiswg.org/fiswg_visual_image_manipulation_detection_in_facial_images_v1.0_2024.11.22.pdf"
+    directory_url: "https://www.fiswg.org/documents/"
+    local_path: null
+    sha256: 1F546A168E70321366D8B7709A1550EFA1F56680A7FDE2E748BEB1322848A662
+    access: downloaded
+    license: "Copyright/redistribution terms not independently cleared."
+    use: "Visual screening for suspicious manipulation cues; escalate to digital image experts"
+  - id: S24
+    title: "Quality Management Requirements for Forensic Facial Image Comparison"
+    organization: FISWG
+    type: draft_for_comment
+    version: "1.0"
+    date: "2026-09-01"
+    status: draft
+    official_url: "https://www.fiswg.org/draft-documents/"
+    directory_url: "https://www.fiswg.org/draft-documents/"
+    local_path: null
+    sha256: null
+    access: metadata_only
+    license: unclear
+    use: "Track draft quality requirements; never present as final mandatory standard"
+  - id: S25
+    title: "InstantID: Zero-shot Identity-Preserving Generation in Seconds"
+    organization: arXiv
+    type: peer_reviewed_research
+    version: "arXiv:2401.07519"
+    date: "2024-01"
+    status: verified
+    official_url: "https://arxiv.org/abs/2401.07519"
+    local_path: null
+    sha256: null
+    access: metadata_only
+    license: "arXiv terms; check paper licence before reuse"
+    use: "Single-image identity conditioning (IdentityNet); reference-image ceiling for likeness work"
+  - id: S26
+    title: "PuLID: Pure and Lightning ID Customization via Contrastive Alignment"
+    organization: NeurIPS 2024
+    type: peer_reviewed_research
+    version: "NeurIPS 2024"
+    date: "2024-12"
+    status: verified
+    official_url: "https://arxiv.org/abs/2404.16022"
+    local_path: null
+    sha256: null
+    access: metadata_only
+    license: conference proceedings terms
+    use: "Contrastive ID embedding for fast identity-preserving generation; batch candidate generation"
+  - id: S27
+    title: "InfiniteYou: Flexible Photo Recrafting While Preserving Your Identity"
+    organization: ICCV 2025
+    type: peer_reviewed_research
+    version: "ICCV 2025"
+    date: "2025-03"
+    status: verified
+    official_url: "https://arxiv.org/abs/2503.16418"
+    local_path: null
+    sha256: null
+    access: metadata_only
+    license: conference proceedings terms
+    use: "Identity-preserving recrafting with layout control"
+  - id: S28
+    title: "DetailMaster: Can Your Text-to-Image Model Handle Long Prompts?"
+    organization: arXiv
+    type: peer_reviewed_research
+    version: "arXiv:2505.16915"
+    date: "2025-05"
+    status: verified
+    official_url: "https://arxiv.org/abs/2505.16915"
+    local_path: null
+    sha256: null
+    access: metadata_only
+    license: "arXiv terms"
+    use: "Evidence that long prompts degrade attribute and layout adherence; token budgets in prompt compilation"
+  - id: S29
+    title: "F-Bench: Rethinking Human Preference Evaluation Metrics for Benchmarking Face Generation, Customization, and Restoration"
+    organization: arXiv
+    type: peer_reviewed_research
+    version: "arXiv:2412.13155"
+    date: "2024-12"
+    status: verified
+    official_url: "https://arxiv.org/abs/2412.13155"
+    local_path: null
+    sha256: null
+    access: metadata_only
+    license: "arXiv terms"
+    use: "Human-preference evaluation design for face generation and restoration"
+  - id: S30
+    title: "AI Image Generation Exhibits East Asian Prototype Bias"
+    organization: Europe PMC preprint
+    type: preprint
+    version: "PPR1182397"
+    date: unknown
+    status: partially_verified
+    official_url: "https://europepmc.org/article/PPR/PPR1182397"
+    local_path: null
+    sha256: null
+    access: metadata_only
+    license: unclear
+    use: "Prototype-bias risk when ethnicity tokens drive East Asian face generation; never cite as peer-reviewed"
+  - id: S31
+    title: "Qwen-Image release notes (20B open-source image generation model)"
+    organization: Qwen
+    type: model_release_note
+    version: "Qwen-Image"
+    date: "2025-08"
+    status: verified
+    official_url: "https://qwenimages.com/blog/qwen-image-release"
+    local_path: null
+    sha256: null
+    access: readable_web_source
+    license: "Apache-2.0 for the released weights; verify at the model card"
+    use: "Chinese-native prompt and Chinese-face prior candidate"
+  - id: S32
+    title: "Kolors model card (bilingual text-to-image)"
+    organization: Kwai-Kolors
+    type: model_card
+    version: "Kolors"
+    date: "2024"
+    status: verified
+    official_url: "https://huggingface.co/Kwai-Kolors/Kolors"
+    local_path: null
+    sha256: null
+    access: readable_web_source
+    license: "Apache-2.0 per model card"
+    use: "Bilingual model with Chinese-face prior; comparison arm in model tests"
+  - id: S33
+    title: "HunyuanImage 3.0 Technical Report"
+    organization: Tencent Hunyuan
+    type: technical_report
+    version: "3.0"
+    date: "2025-09"
+    status: verified
+    official_url: "https://arxiv.org/abs/2509.23951"
+    local_path: null
+    sha256: null
+    access: metadata_only
+    license: "arXiv terms"
+    use: "Open Chinese image model; candidate base model"
+  - id: S34
+    title: "FLUX.1 Kontext: Open Weights for Image Editing"
+    organization: Black Forest Labs
+    type: model_release_note
+    version: "Kontext [dev]"
+    date: "2025"
+    status: verified
+    official_url: "https://bfl.ai/blog/flux-1-kontext-dev"
+    local_path: null
+    sha256: null
+    access: readable_web_source
+    license: "Model licence at release page"
+    use: "Instruction-based local editing for the iterative refinement loop"
+  - id: S35
+    title: "Facial recall and computer composites"
+    organization: University of Central Lancashire repository (Frowd, C. D.)
+    type: peer_reviewed_review
+    version: "2012"
+    date: "2012"
+    status: verified
+    official_url: "http://clok.uclan.ac.uk/38381/1/38381%20Frowd%20%282012%29.%20Facial%20recall%20and%20computer%20composites.pdf"
+    local_path: null
+    sha256: null
+    access: readable_web_source
+    license: publisher rights apply
+    use: "Baseline naming/identification rates for composites; do not turn '90% pixel similarity' into a forensic claim"

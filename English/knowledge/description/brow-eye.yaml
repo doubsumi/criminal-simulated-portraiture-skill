@@ -1,0 +1,21 @@
+schema_version: "0.1"
+status: project_observation_protocol
+purpose: "Separate brow-ridge appearance, eyebrow hair, eye opening, eyelids, and canthi."
+when_to_load: "When the brow and eye regions are visible and a user reports brow or eye mismatch."
+source_refs: [S01, CN03]
+dimensions:
+  - id: brow_ridge_appearance
+    zh: 眉弓外观
+    observe: "Visible prominence or shadow pattern only; do not assert bone structure from lighting alone."
+  - id: eyebrow_hair
+    zh: 眉毛
+    observe: "Head, arch, tail, thickness, density, direction, and left-right difference as separate observations."
+  - id: eye_fissure
+    zh: 眼裂
+    observe: "Opening shape, height, length, and outer-corner angle."
+  - id: eyelid_canthus
+    zh: 眼睑与内外眦
+    observe: "Upper/lower lid visibility, fold, medial canthus, and lateral canthus separately."
+rules:
+  - "Do not translate brow-ridge prominence into eyebrow thickness."
+  - "Record image-coordinate left/right when mirror status is unknown."

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.1.0",
+  "observation_id": "OBS-0001",
+  "component_id": "F07",
+  "feature_id": "F07.C03",
+  "dimension_id": "D01",
+  "feature_name_en": "Right eye fissure opening",
+  "feature_name_zh": "右眼裂",
+  "viewpoint": "frontal",
+  "laterality": {"side": "right", "reference_frame": "image", "mirror_status": "unknown"},
+  "observation": {"value": "unknown", "display_zh": "未知", "display_en": "unknown", "free_text": "图像中眼角边界部分可见，暂不作形态判断"},
+  "visibility": "partial",
+  "confidence": {"level": "low", "value": null, "calibrated": false, "basis": "边界受到头部轻微转动和光照影响"},
+  "source_type": "direct_visual_observation",
+  "confirmation_status": "unconfirmed",
+  "knowledge_refs": ["S01", "S02"],
+  "evidence_refs": [{"evidence_id": "IMG-001-REGION-07", "evidence_type": "image_region", "asset_id": "IMG-001", "region": {"x": null, "y": null, "width": null, "height": null}, "timecode": null}],
+  "limitations": ["镜像状态未知，不能映射为人物解剖学左侧"]
+}

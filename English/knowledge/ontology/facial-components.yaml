@@ -1,0 +1,482 @@
+schema_version: "0.1"
+source:
+  id: S01
+  title: Facial Image Comparison Feature List for Morphological Analysis
+  version: "2.0"
+  date: "2018-09-11"
+  source_ref: S01
+  notes: "English feature terms are source terms. Chinese labels and descriptor values are project translations or project-defined controlled vocabulary."
+translation_policy:
+  chinese_status: project_translation
+  unknown_value: unknown
+  not_observable_value: not_observable
+  not_applicable_value: not_applicable
+components:
+  - id: F01
+    source_section: "4.3.1"
+    en: Skin
+    zh: 皮肤
+    definition_en: Overall appearance of the skin.
+    characteristics:
+      - id: F01.C01
+        en: Overall skin appearance
+        zh: 整体皮肤外观
+        descriptors: [overall appearance]
+      - id: F01.C02
+        en: Overall texture
+        zh: 整体纹理
+        descriptors: [texture]
+      - id: F01.C03
+        en: Overall tone
+        zh: 整体色调
+        descriptors: [luminance, color]
+  - id: F02
+    source_section: "4.3.2"
+    en: Face/Head Outline
+    zh: 面部/头部轮廓
+    definition_en: Overall shape of the cranial vault and face.
+    characteristics:
+      - id: F02.C01
+        en: Shape of cranial vault
+        zh: 颅顶形状
+        descriptors: [portrait contour, profile contour]
+      - id: F02.C02
+        en: Overall shape of face
+        zh: 面部整体形状
+        descriptors: [portrait contour, profile contour]
+  - id: F03
+    source_section: "4.3.3"
+    en: Face/Head Composition
+    zh: 面部/头部构成
+    definition_en: Configuration, alignment, and relative size of facial components within one face.
+    characteristics:
+      - id: F03.C01
+        en: Proportions/position of features on face
+        zh: 面部特征比例/位置
+        descriptors: [approximate width, approximate distance, relative position, relative size]
+        relations: [nose-to-eye distance, mouth-to-eye distance, nose-to-mouth width, nose-to-upper-lip distance, chin-to-lower-lip distance, ear-to-feature position, eye-to-face-length position]
+  - id: F04
+    source_section: "4.3.4"
+    en: Hair
+    zh: 头发
+    definition_en: Shape and distribution of head hair, including hairline and cranial baldness pattern.
+    characteristics:
+      - id: F04.C01
+        en: Hair shape/spatial distribution
+        zh: 头发形状/空间分布
+        descriptors: [overall hair length]
+      - id: F04.C02
+        en: Texture
+        zh: 纹理
+        descriptors: [texture]
+      - id: F04.C03
+        en: Symmetry
+        zh: 对称性
+        descriptors: [symmetry]
+      - id: F04.C04
+        en: Density and distribution of density
+        zh: 密度及密度分布
+        descriptors: [density, gaps]
+      - id: F04.C05
+        en: Tonality and variation in color/tonality
+        zh: 色调及色调变化
+        descriptors: [color, tonality, variation]
+      - id: F04.C06
+        en: Forehead hairline right/left
+        zh: 前额右/左侧发际线
+        descriptors: [detailed shape]
+      - id: F04.C07
+        en: Cranial baldness pattern
+        zh: 颅顶部脱发模式
+        descriptors: [detailed shape, distribution]
+  - id: F05
+    source_section: "4.3.5"
+    en: Forehead
+    zh: 前额
+    definition_en: Part of the face above the eyes, including brow ridges.
+    characteristics:
+      - id: F05.C01
+        en: Forehead shape
+        zh: 前额形状
+        descriptors: [relative height, relative width, slope/contour]
+      - id: F05.C02
+        en: Brow ridges
+        zh: 眉弓
+        descriptors: [prominence, continuity]
+  - id: F06
+    source_section: "4.3.6"
+    en: Eyebrows
+    zh: 眉毛
+    definition_en: Strips of hair above the eyes.
+    characteristics:
+      - id: F06.C01
+        en: Right eyebrow
+        zh: 右眉
+        descriptors: [shape, size, length, width, tilt, vertical end position, horizontal end position, density, texture, hair length, thickness, color]
+      - id: F06.C02
+        en: Left eyebrow
+        zh: 左眉
+        descriptors: [shape, size, length, width, tilt, vertical end position, horizontal end position, density, texture, hair length, thickness, color]
+      - id: F06.C03
+        en: Conjoined left-right eyebrows
+        zh: 左右眉相连
+        descriptors: [presence, extent]
+      - id: F06.C04
+        en: Asymmetry between right and left eyebrows
+        zh: 左右眉不对称
+        descriptors: [shape, size, position, hair details]
+      - id: F06.C05
+        en: Eyebrow appearance with unresolved anatomical side
+        zh: 解剖学侧别未定的眉毛外观
+        origin: project_extension
+        source_basis: S01
+        descriptors: [shape, density, color, position relative to eyes]
+  - id: F07
+    source_section: "4.3.7"
+    en: Eyes
+    zh: 眼睛
+    definition_en: Orbital region below the eyebrows and above the cheeks.
+    characteristics:
+      - id: F07.C01
+        en: Intercanthal distance
+        zh: 内眦间距
+        descriptors: [distance between inner corners]
+      - id: F07.C02
+        en: Interpupillary distance
+        zh: 瞳孔间距
+        descriptors: [distance between pupil centers]
+      - id: F07.C03
+        en: Right/left eye fissure opening
+        zh: 右/左眼裂
+        descriptors: [shape, angle]
+      - id: F07.C04
+        en: Right/left upper eyelid
+        zh: 右/左上眼睑
+        descriptors: [prominence, protrusion, superior palpebral furrow visibility, position relative to iris/pupil, lash length, lash density, lash flow, irregularity]
+      - id: F07.C05
+        en: Right/left lower eyelid
+        zh: 右/左下眼睑
+        descriptors: [prominence, protrusion, inferior palpebral furrow visibility, infraorbital furrow visibility, position relative to iris/pupil, lash length, lash density, lash flow, irregularity]
+      - id: F07.C06
+        en: Right/left eyeball prominence
+        zh: 右/左眼球突出度
+        descriptors: [degree of protrusion]
+      - id: F07.C07
+        en: Right/left sclera
+        zh: 右/左巩膜
+        descriptors: [visibility of vessels, defects, color]
+      - id: F07.C08
+        en: Right/left iris
+        zh: 右/左虹膜
+        descriptors: [color, visibility, diameter relative to eye opening, position, pupil irregularity]
+      - id: F07.C09
+        en: Right/left medial canthus
+        zh: 右/左内眦
+        descriptors: [caruncle, shape, angle]
+      - id: F07.C10
+        en: Right/left lateral canthus
+        zh: 右/左外眦
+        descriptors: [shape, angle]
+      - id: F07.C11
+        en: Asymmetry between right and left eyes
+        zh: 左右眼不对称
+        descriptors: [shape, angle, offset, eyelids, eyelashes, color, iris/pupil position]
+  - id: F08
+    source_section: "4.3.8"
+    en: Cheeks
+    zh: 面颊
+    definition_en: Regions surrounded by the eyes, ears, nose, mouth, chin, and jawline.
+    characteristics:
+      - id: F08.C01
+        en: Right/left cheekbone
+        zh: 右/左颧骨
+        descriptors: [prominence]
+      - id: F08.C02
+        en: Right/left cheek shape (soft tissue)
+        zh: 右/左面颊形状（软组织）
+        descriptors: [shape, dimple presence]
+  - id: F09
+    source_section: "4.3.9"
+    en: Nose
+    zh: 鼻子
+    definition_en: Entire nasal region.
+    characteristics:
+      - id: F09.C01
+        en: Nasal outline
+        zh: 鼻部轮廓
+        descriptors: [overall shape, length, width, prominence, symmetry]
+      - id: F09.C02
+        en: Nasal root/bridge
+        zh: 鼻根/鼻梁
+        descriptors: [front width, front length, front shape, front depth, profile length, profile depth, profile angle]
+      - id: F09.C03
+        en: Nasal body
+        zh: 鼻体
+        descriptors: [front width, front length, front shape, front angle, profile length, profile angle, profile contour]
+      - id: F09.C04
+        en: Nasal tip
+        zh: 鼻尖
+        descriptors: [front shape, profile shape, bifid presence, angle, symmetry]
+      - id: F09.C05
+        en: Nasal base
+        zh: 鼻基底
+        descriptors: [width, height, deviation right/left]
+      - id: F09.C06
+        en: Nasal alae
+        zh: 鼻翼
+        descriptors: [thickness, symmetry, shape]
+      - id: F09.C07
+        en: Nostrils
+        zh: 鼻孔
+        descriptors: [opening shape, opening size, symmetry, hair]
+      - id: F09.C08
+        en: Columella
+        zh: 鼻小柱
+        descriptors: [width, length, relative position, symmetry]
+  - id: F10
+    source_section: "4.3.10"
+    en: Ears
+    zh: 耳朵
+    definition_en: External characteristics of the ears.
+    characteristics:
+      - id: F10.C01
+        en: Asymmetry between left and right ears
+        zh: 左右耳不对称
+        descriptors: [size, shape, protrusion, positioning]
+      - id: F10.C02
+        en: Right/left ear protrusion
+        zh: 右/左耳外突
+        descriptors: [extent]
+      - id: F10.C03
+        en: Overall right/left ear
+        zh: 右/左耳整体
+        descriptors: [size, shape, angle]
+      - id: F10.C04
+        en: Helix superior/inferior tail
+        zh: 耳轮上/下部（耳轮尾）
+        descriptors: [size, shape]
+      - id: F10.C05
+        en: Auricular tubercle
+        zh: 耳结节
+        descriptors: [size, shape, quantity]
+      - id: F10.C06
+        en: Antihelix and crura
+        zh: 对耳轮及其脚
+        descriptors: [size, shape]
+      - id: F10.C07
+        en: Triangular fossa, helix crus, scaphoid fossa, concha
+        zh: 三角窝、耳轮脚、舟状窝、耳甲
+        descriptors: [size, shape]
+      - id: F10.C08
+        en: Tragus and antitragus
+        zh: 耳屏和对耳屏
+        descriptors: [size, shape, protrusion]
+      - id: F10.C09
+        en: Intertragic notch, anterior knob, anterior notch
+        zh: 耳屏间切迹、前结节、前切迹
+        descriptors: [size, shape]
+      - id: F10.C10
+        en: Posterior auricular furrow
+        zh: 耳后沟
+        descriptors: [size, shape]
+      - id: F10.C11
+        en: Lobule/lobe
+        zh: 耳垂
+        descriptors: [size, shape, attached_or_detached]
+      - id: F10.C12
+        en: Ear abnormalities
+        zh: 耳部异常
+        descriptors: [description]
+  - id: F11
+    source_section: "4.3.11"
+    en: Mouth
+    zh: 嘴部
+    definition_en: Entire oral region, including teeth and philtrum.
+    characteristics:
+      - id: F11.C01
+        en: Philtrum
+        zh: 人中
+        descriptors: [prominence, ridge width, furrow width, symmetry]
+      - id: F11.C02
+        en: Overall mouth
+        zh: 嘴部整体
+        descriptors: [shape, symmetry]
+      - id: F11.C03
+        en: Upper lip
+        zh: 上唇
+        descriptors: [shape, fullness, protrusion, symmetry, vermilion border shape, definition, detail]
+      - id: F11.C04
+        en: Lower lip
+        zh: 下唇
+        descriptors: [shape, fullness, protrusion, symmetry, vermilion border shape, definition, detail]
+      - id: F11.C05
+        en: Lip fissure
+        zh: 唇裂隙
+        descriptors: [shape, symmetry, degree of contact/occlusion, lengthwise contact]
+      - id: F11.C06
+        en: Corners/angles of mouth
+        zh: 口角/口角角度
+        descriptors: [shape, angle]
+      - id: F11.C07
+        en: Mouth asymmetry
+        zh: 嘴部不对称
+        descriptors: [difference between left and right sides]
+      - id: F11.C08
+        en: Dental occlusion and gnathism
+        zh: 牙齿咬合及颌突关系
+        descriptors: [symmetry, contact, degree, upper/lower projection, expression]
+      - id: F11.C09
+        en: Teeth detail
+        zh: 牙齿细节
+        descriptors: [shape, size, alignment, gaps, crookedness, missing teeth, wear, damage, disease, color]
+      - id: F11.C10
+        en: Mouth abnormalities
+        zh: 嘴部异常
+        descriptors: [description]
+  - id: F12
+    source_section: "4.3.12"
+    en: Chin/Jawline
+    zh: 下巴/下颌线
+    definition_en: Lower mandibular border, chin, jawline and gonial angle.
+    characteristics:
+      - id: F12.C01
+        en: Chin, frontal/profile
+        zh: 下巴正面/侧面
+        descriptors: [overall shape, length, width, prominence, symmetry, cleft, dimple, mental groove]
+      - id: F12.C02
+        en: Jawline from chin to gonial angle
+        zh: 从下巴到下颌角的下颌线
+        descriptors: [shape, definition, jowls]
+      - id: F12.C03
+        en: Gonial angle
+        zh: 下颌角
+        descriptors: [shape, definition]
+  - id: F13
+    source_section: "4.3.13"
+    en: Neck
+    zh: 颈部
+    definition_en: Transitional zone between head and trunk/limbs.
+    characteristics:
+      - id: F13.C01
+        en: Neck overall
+        zh: 颈部整体
+        descriptors: [width, height, musculature, veins, wrinkles, folds, wattle, double chin]
+      - id: F13.C02
+        en: Laryngeal prominence
+        zh: 喉结
+        descriptors: [shape, size, prominence, location on neck]
+  - id: F14
+    source_section: "4.3.14"
+    en: Facial Hair
+    zh: 面部毛发
+    definition_en: Hair on cheeks, chin/jaw, lips and neck.
+    characteristics:
+      - id: F14.C01
+        en: Hair above upper lip / below lower lip
+        zh: 上唇上方/下唇下方面部毛发
+        descriptors: [shape/spatial distribution, overall length, texture, symmetry, density, gaps, color/tonality, orientation, edge definition, continuity, longer hairs]
+      - id: F14.C02
+        en: Hair on right/left side
+        zh: 右/左侧面部毛发
+        descriptors: [shape/spatial distribution, overall length, texture, symmetry, density, gaps, color/tonality, orientation, edge definition, continuity, longer hairs]
+      - id: F14.C03
+        en: Hair on neck below chin/jawline
+        zh: 下巴/下颌线以下颈部毛发
+        descriptors: [shape/spatial distribution, overall length, texture, symmetry, density, gaps, color/tonality, orientation, edge definition, continuity, longer hairs]
+  - id: F15
+    source_section: "4.3.15"
+    en: Facial Lines
+    zh: 面部纹路
+    definition_en: Wrinkles, folds and creases; common examples are not exhaustive.
+    characteristics:
+      - id: F15.C01
+        en: Frontal lines
+        zh: 额纹
+        descriptors: [distribution, orientation, quantity, pattern, depth/prominence]
+      - id: F15.C02
+        en: Vertical glabellar lines and nasion crease
+        zh: 垂直眉间纹及鼻根皱褶
+        descriptors: [length, distribution, quantity, pattern, depth/prominence]
+      - id: F15.C03
+        en: Lateral nasal, bifid nose and periorbital lines
+        zh: 鼻侧纹、鼻分叉皱褶及眼周纹
+        descriptors: [distribution, orientation, quantity, pattern, length, depth/prominence]
+      - id: F15.C04
+        en: Palpebral and infraorbital creases
+        zh: 眼睑及眶下皱褶
+        descriptors: [visibility, position, shape, distribution, quantity, pattern, depth/prominence]
+      - id: F15.C05
+        en: Circumoral striae and mentolabial sulcus
+        zh: 口周纹及颏唇沟
+        descriptors: [distribution, quantity, pattern, shape, length, depth/prominence]
+      - id: F15.C06
+        en: Nasolabial, marionette and buccal creases/folds
+        zh: 鼻唇沟、木偶纹及颊部皱褶
+        descriptors: [distribution, quantity, pattern, depth/prominence]
+      - id: F15.C07
+        en: Cleft chin and neck wrinkles
+        zh: 下巴裂及颈纹
+        descriptors: [size, distribution, quantity, pattern, depth/prominence]
+      - id: F15.C08
+        en: Other creases
+        zh: 其他皱褶
+        descriptors: [distribution, quantity, pattern, depth/prominence]
+  - id: F16
+    source_section: "4.3.16"
+    en: Scars
+    zh: 疤痕
+    definition_en: Dysmorphic or discolored skin areas where permanent damage has healed.
+    characteristics:
+      - id: F16.C01
+        en: Scar
+        zh: 疤痕
+        descriptors: [location, shape, orientation, size, color/tonality, depth/prominence]
+  - id: F17
+    source_section: "4.3.17"
+    en: Facial Marks
+    zh: 面部标记
+    definition_en: Areas with different pigmentation; some marks are transient and require contemporaneous images.
+    characteristics:
+      - id: F17.C01
+        en: Skin marks
+        zh: 皮肤标记
+        descriptors: [location/distribution, relation to other marks, shape, size, color, prominence]
+        examples: [freckles, moles, acne, rosacea, birth marks, bruises, abrasions, vitiligo, dark/light patches]
+  - id: F18
+    source_section: "4.3.18"
+    en: Alterations
+    zh: 人为改变
+    definition_en: Intentional modification to the face, excluding scarring.
+    characteristics:
+      - id: F18.C01
+        en: Piercing
+        zh: 穿刺/穿孔饰物
+        descriptors: [location, description]
+      - id: F18.C02
+        en: Makeup
+        zh: 化妆
+        descriptors: [location, shape, size, color, description]
+      - id: F18.C03
+        en: Tattoo including cosmetic tattoo
+        zh: 纹身（含美容纹饰）
+        descriptors: [location, content, shape, size, color, description]
+      - id: F18.C04
+        en: Other alteration
+        zh: 其他人为改变
+        descriptors: [location, description]
+      - id: F18.C05
+        en: Eyewear (removable accessory)
+        zh: 眼镜（可移除佩饰）
+        origin: project_extension
+        source_basis: CN03
+        descriptors: [frame shape, frame color, lens coverage, occlusion]
+  - id: F19
+    source_section: "4.3.19"
+    en: Other
+    zh: 其他
+    definition_en: Observable deformities or irregularities not fitting the listed feature set.
+    characteristics:
+      - id: F19.C01
+        en: Other text
+        zh: 其他文字描述
+        descriptors: [description, details]

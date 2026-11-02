@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/feature_observation.schema.json",
+  "title": "FeatureObservation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "observation_id", "component_id", "feature_id", "dimension_id", "feature_name_en", "feature_name_zh", "viewpoint", "laterality", "observation", "visibility", "confidence", "source_type", "confirmation_status", "knowledge_refs", "evidence_refs", "limitations"],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "observation_id": {"type": "string", "minLength": 1},
+    "component_id": {"type": "string", "pattern": "^F(0[1-9]|1[0-9])$"},
+    "feature_id": {"type": "string", "minLength": 1},
+    "dimension_id": {"type": "string", "pattern": "^(D[0-9]{2}|D_UNKNOWN)$"},
+    "feature_name_en": {"type": "string", "minLength": 1},
+    "feature_name_zh": {"type": "string", "minLength": 1},
+    "viewpoint": {"enum": ["frontal", "left_oblique", "right_oblique", "left_profile", "right_profile", "unknown", "other"]},
+    "laterality": {
+      "type": "object", "additionalProperties": false,
+      "required": ["side", "reference_frame", "mirror_status"],
+      "properties": {
+        "side": {"enum": ["left", "right", "bilateral", "midline", "unknown"]},
+        "reference_frame": {"enum": ["image", "anatomical", "unknown"]},
+        "mirror_status": {"enum": ["original", "mirrored", "unknown"]}
+      }
+    },
+    "observation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["value", "display_zh", "display_en", "free_text"],
+      "properties": {"value": {}, "display_zh": {"type": "string"}, "display_en": {"type": "string"}, "free_text": {"type": "string"}}
+    },
+    "visibility": {"enum": ["clear", "partial", "obscured", "not_visible", "not_applicable", "uncertain"]},
+    "confidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["level", "value", "calibrated", "basis"],
+      "properties": {"level": {"enum": ["high", "medium", "low", "unknown"]}, "value": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "calibrated": {"type": "boolean"}, "basis": {"type": "string"}}
+    },
+    "source_type": {"enum": ["direct_visual_observation", "user_free_recall", "user_cued_recall", "user_response_to_neutral_clarification", "agent_suggestion", "external_reference", "expert_review", "unknown"]},
+    "confirmation_status": {"enum": ["unconfirmed", "confirmed_by_user", "rejected_by_user", "revised_by_user", "expert_reviewed", "not_applicable"]},
+    "knowledge_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^(?:S|CN)[0-9]{2,}$"}},
+    "evidence_refs": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/evidence_ref"}
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "created_at": {"type": ["string", "null"], "format": "date-time"},
+    "updated_at": {"type": ["string", "null"], "format": "date-time"}
+  },
+  "$defs": {
+    "evidence_ref": {
+      "type": "object", "additionalProperties": false,
+      "required": ["evidence_id", "evidence_type", "asset_id", "region", "timecode"],
+      "properties": {
+        "evidence_id": {"type": "string", "minLength": 1},
+        "evidence_type": {"enum": ["image_region", "image_frame", "interview_answer", "user_attachment", "expert_note", "other"]},
+        "asset_id": {"type": ["string", "null"]},
+        "region": {"anyOf": [{"$ref": "#/$defs/region"}, {"type": "null"}]},
+        "timecode": {"type": ["string", "null"]}
+      }
+    },
+    "region": {
+      "type": "object", "additionalProperties": false,
+      "required": ["x", "y", "width", "height"],
+      "properties": {"x": {"type": ["number", "null"]}, "y": {"type": ["number", "null"]}, "width": {"type": ["number", "null"]}, "height": {"type": ["number", "null"]}}
+    }
+  }
+}

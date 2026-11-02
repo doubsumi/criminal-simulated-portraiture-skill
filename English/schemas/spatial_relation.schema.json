@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/spatial_relation.schema.json",
+  "title": "SpatialRelation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["relation_id", "relation_type", "subject_feature_id", "reference_feature_id", "value", "viewpoint", "evidence_refs", "limitations"],
+  "properties": {
+    "relation_id": {"type": "string", "minLength": 1},
+    "relation_type": {"enum": ["above_below", "medial_lateral", "proximal_distal", "relative_width", "relative_length", "relative_prominence", "angle", "alignment", "symmetry_difference"]},
+    "subject_feature_id": {"type": "string", "minLength": 1},
+    "reference_feature_id": {"type": "string", "minLength": 1},
+    "value": {},
+    "viewpoint": {"enum": ["frontal", "left_oblique", "right_oblique", "left_profile", "right_profile", "unknown", "other"]},
+    "evidence_refs": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}
