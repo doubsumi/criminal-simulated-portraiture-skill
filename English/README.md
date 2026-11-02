@@ -35,4 +35,4 @@ The [public source manifest](knowledge/source_manifest.yaml) records publisher l
 
 ## Rights and limitations
 
-No project license has been selected. A license for project-authored code and content must be decided before public release. Third-party standards and papers remain under their publishers' terms; a public download link does not grant redistribution rights. Do not treat project translations or summaries as publisher-approved standards.
+Project-authored code and content are released under the [GNU Lesser General Public License v3.0 (LGPL-3.0)](../LICENSE); [`COPYING`](../COPYING) contains the GPL-3.0 text that LGPL-3.0 references. Third-party standards and papers remain under their publishers' terms; a public download link does not grant redistribution rights. Do not treat project translations or summaries as publisher-approved standards.
